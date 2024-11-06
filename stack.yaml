@@ -1,0 +1,4 @@
+name: azure-lets-encrypt
+terraform:
+  version: 1.9.5
+  backend: azurerm
