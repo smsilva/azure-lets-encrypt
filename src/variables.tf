@@ -1,13 +1,16 @@
 variable "common_name" {
   description = "The common name to use for the ACME certificate"
   type        = string
-  default     = "echo.sandbox.wasp.silvios.me"
+  default     = "*.sandbox.wasp.silvios.me"
 }
 
 variable "subject_alternative_names" {
   description = "The subject alternative names to use for the ACME certificate"
   type        = list(string)
-  default     = ["echo.sandbox.wasp.silvios.me"]
+  default = [
+    "*.us1.sandbox.wasp.silvios.me",
+    "*.us2.sandbox.wasp.silvios.me"
+  ]
 }
 
 variable "dns_provider" {
